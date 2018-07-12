@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 COPY package.json .npmrc ./
 
-RUN yarn
+RUN yarn 
 
 ENV PORT 8000
 
@@ -20,4 +20,4 @@ RUN ln -s /usr/src/app/node_modules/@bower_components /usr/src/app/app/libs
 ARG COMMIT
 ENV COMMIT $COMMIT
 
-CMD [ "node", "server" ]
+CMD [ "node", "server" ] // test
