@@ -2,12 +2,12 @@
   "name": "eunomia-cbd-int",
   "version": "0.0.1",
   "description": "Eunomia - room scheduling",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
   "main": "server.js",
   "dependencies": {
-    "ejs": "2.5.8",
-    "express": "^4.16.3",
-    "http-proxy": "1.17",
-    "serve-static": "^1.13.2",
     "@bower_components/angular": "angular/bower-angular#1.5.11",
     "@bower_components/angular-animate": "angular/bower-angular-animate#1.5",
     "@bower_components/angular-bootstrap-colorpicker": "buberdds/angular-bootstrap-colorpicker#3.0.25",
@@ -36,12 +36,15 @@
     "@bower_components/require-css": "guybedford/require-css#0.1.8",
     "@bower_components/requirejs": "jrburke/requirejs-bower#2.1.18",
     "@bower_components/requirejs-plugins": "millermedeiros/requirejs-plugins#1.0.3",
-    "@bower_components/requirejs-text": "requirejs/text#2.0.14"
+    "@bower_components/requirejs-text": "requirejs/text#2.0.14",
+    "ejs": "2.5.8",
+    "express": "4.16.3",
+    "http-proxy": "1.17",
+    "serve-static": "1.13.2"
   },
   "engine": "node >= 8",
-  "devDependencies": {},
-  "scripts": {
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'app/libs', 'junction') } catch (e) { }\""
+  "devDependencies": {
+    "vuepress": "^0.12.0"
   },
   "repository": {
     "type": "git",
